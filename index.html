@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[창의적 체험활동 민주시민교육(2026.08.14.)] 민주주의의 엔진, 갈등</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+            word-break: keep-all;
+        }
+
+        .student-info {
+            display: flex;
+            gap: 20px;
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .student-info input {
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            padding: 6px 10px;
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .concept-box {
+            background-color: #f1f8ff;
+            border: 1px solid #c8e1ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .concept-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .concept-box li {
+            margin-bottom: 8px;
+        }
+
+        .question-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        textarea {
+            width: 100%;
+            height: 110px;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            resize: vertical;
+            font-family: inherit;
+            margin-top: 8px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .submit-btn {
+            background-color: #27ae60;
+        }
+
+        .submit-btn:hover {
+            background-color: #219653;
+        }
+
+        .hint-btn {
+            background-color: #718096;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+
+        .hint-content {
+            display: none;
+            background: #fff5f5;
+            color: var(--accent-color);
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .container { box-shadow: none; padding: 0; }
+            button, .hint-btn { display: none; }
+            textarea { border: 1px solid #000; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <!-- 요청하신 제목으로 변경 완료 -->
+        <h1>[창의적 체험활동 민주시민교육(2026.08.14.)] 민주주의의 엔진, 갈등</h1>
+        <div class="student-info">
+            <span>학번: <input type="text" id="studentId" size="12" placeholder="예: 20101"></span>
+            <span>이름: <input type="text" id="name" size="12" placeholder="홍길동"></span>
+        </div>
+    </header>
+
+    <!-- 1. 핵심 개념 정리 -->
+    <section>
+        <h2>1. 영상 핵심 요약 및 개념 정리</h2>
+        <div class="concept-box">
+            <ul>
+                <li><strong>사적 해결 vs 공적 해결:</strong> 사적 해결은 서열이나 힘의 우위에 의해 결정되어 불평등을 야기하지만, 정부나 법 등 공적 권력에 의한 해결은 약자를 보호하고 균형을 도모합니다.</li>
+                <li><strong>샤츠슈나이더(E.E. Schattschneider)의 갈등 이론:</strong> 갈등은 민주주의의 핵심 요소이며, 정당은 사회적 갈등을 표출하고 조직화하여 민주적으로 해결하는 역할을 수행합니다.</li>
+                <li><strong>선거와 갈등의 치환:</strong> 정당은 다양한 잠재적 갈등 중 특정 갈등을 선택하여 이슈화함으로써 선거 구도를 형성합니다.</li>
+                <li><strong>민주주의의 엔진, 갈등:</strong> 갈등은 배제하거나 억압해야 할 대상이 아니라, 사회 질서를 재구성하고 발전시키는 민주주의의 동력입니다.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 2. 영상 이해 문제 -->
+    <section>
+        <h2>2. 영상 내용 확인 문제 (기초)</h2>
+
+        <div class="question-card">
+            <div class="question-title">Q1. 영상에서 제시된 갈등의 '사적 해결'과 '공적 해결'의 차이점으로 가장 적절하지 않은 것은?</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="1번"> ① 사적 해결은 힘이 센 강자에게 유리하게 작용한다.</label>
+                <label><input type="radio" name="q1" value="2번"> ② 공적 해결은 제3자(정부, 교사 등)가 개입하여 힘의 균형을 이룬다.</label>
+                <label><input type="radio" name="q1" value="3번"> ③ 약자는 자신의 권리를 보호하기 위해 공적 해결을 선호한다.</label>
+                <label><input type="radio" name="q1" value="4번"> ④ 권위주의 정부는 공적 절차를 통해 갈등을 평화롭게 중재한다.</label>
+            </div>
+            <button type="button" class="hint-btn" onclick="toggleHint('hint1')">보충설명 보기</button>
+            <div id="hint1" class="hint-content">보충설명: 권위주의 체제는 갈등을 인정하고 중재하기보다 통제와 억압의 대상으로 바라봅니다. (정답: ④)</div>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">Q2. 영상의 내용을 바탕으로 볼 때, '민주주의'와 '갈등'의 관계에 대한 설명으로 가장 적절한 것은 무엇일까요?</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="1번"> ① 민주주의의 최종 목표는 사회의 모든 갈등을 완벽히 없애는 것이다.</label>
+                <label><input type="radio" name="q2" value="2번"> ② 갈등은 사회 불안을 야기하므로 정당이 적극적으로 억압해야 한다.</label>
+                <label><input type="radio" name="q2" value="3번"> ③ 민주주의는 갈등을 건강하게 드러내고 제도적으로 해결해 나가는 과정이다.</label>
+                <label><input type="radio" name="q2" value="4번"> ④ 갈등을 사적으로 해결할수록 민주적 자치 능력이 크게 향상된다.</label>
+            </div>
+            <button type="button" class="hint-btn" onclick="toggleHint('hint2')">보충설명 보기</button>
+            <div id="hint2" class="hint-content">보충설명: 민주주의는 갈등이 없는 상태가 아니라, 사회의 다양한 갈등을 공적인 공간으로 끌어올려 차별과 불평등을 개선해 나가는 체제입니다. (정답: ③)</div>
+        </div>
+    </section>
+
+    <!-- 3. 서술형 및 심화 탐구 -->
+    <section>
+        <h2>3. 사고력 확장 및 심화 탐구 (서술형)</h2>
+
+        <div class="question-card">
+            <div class="question-title">
+                Q3. [개념 적용] 영상에서는 정당이 '갈등을 조직하고 치환하는 역할'을 한다고 설명합니다. 선거 과정에서 정당이 다양한 사회적 갈등을 어떻게 다루고 단순화하는지 여러분의 언어로 설명해 볼까요?
+            </div>
+            <textarea id="q3" placeholder="정당이 유권자들의 요구를 모아 특정 이슈를 부각하는 과정을 떠올리며 작성해 보세요..."></textarea>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">
+                Q4. [토론 주제] "갈등은 사회를 분열시키는 부작용일까요, 아니면 민주주의를 발전시키는 엔진일까요?" 영상의 내용을 바탕으로 자신의 생각을 구체적인 사례와 함께 자유롭게 서술해 봅시다.
+            </div>
+            <textarea id="q4" placeholder="갈등의 공적 해결과 민주적 제도의 역할에 대해 고민한 내용을 적어 보세요..."></textarea>
+        </div>
+    </section>
+
+    <div class="btn-container">
+        <button type="button" class="submit-btn" onclick="submitWorksheet()">학습지 제출하기</button>
+        <button type="button" onclick="window.print()" style="background-color: #4a5568;">PDF 저장 / 인쇄</button>
+    </div>
+</div>
+
+<script>
+    function toggleHint(id) {
+        const hint = document.getElementById(id);
+        hint.style.display = (hint.style.display === "block") ? "none" : "block";
+    }
+
+    function submitWorksheet() {
+        // ★ 아래 큰따옴표 안에 구글 앱스 스크립트 웹 앱 URL을 붙여넣으세요.
+        const GAS_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+        const studentId = document.getElementById("studentId").value.trim();
+        const name = document.getElementById("name").value.trim();
+
+        if (!studentId || !name) {
+            alert("학번과 이름을 모두 입력해주세요.");
+            return;
+        }
+
+        const q1Selected = document.querySelector('input[name="q1"]:checked');
+        const q2Selected = document.querySelector('input[name="q2"]:checked');
+
+        const formData = {
+            studentId: studentId,
+            name: name,
+            q1: q1Selected ? q1Selected.value : "미선택",
+            q2: q2Selected ? q2Selected.value : "미선택",
+            q3: document.getElementById("q3").value,
+            q4: document.getElementById("q4").value
+        };
+
+        if (GAS_URL === "https://script.google.com/macros/s/AKfycbyPjryrOSxBqsS_G5HvOzpu7KF1N7twEoQs53-fxhnJzO39QBO3tCiiQiLgEupAxBU/exec" || !GAS_URL) {
+            alert("구글 연동 URL이 설정되지 않았습니다. 교사 안내대로 스크립트 URL을 입력해 주세요.");
+            return;
+        }
+
+        if(!confirm("작성한 학습지를 제출하시겠습니까?")) return;
+
+        alert("제출 중입니다. 잠시만 기다려주세요...");
+
+        fetch(GAS_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        })
+        .then(() => {
+            alert("성공적으로 제출되었습니다! 수고하셨습니다.");
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("제출 중 오류가 발생했습니다. 다시 시도해 주세요.");
+        });
+    }
+</script>
+
+</body>
+</html>
